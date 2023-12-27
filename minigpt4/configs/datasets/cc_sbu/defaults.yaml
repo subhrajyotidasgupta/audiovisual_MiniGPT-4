@@ -2,4 +2,4 @@ datasets:
   cc_sbu:
     data_type: images
     build_info:
-      storage: /path/to/cc_sbu_dataset/{00000..01255}.tar
+      storage: /home/mila/s/subhrajyoti.dasgupta/scratch/minigpt/data/cc_sbu_laion/cc_sbu/cc_sbu_dataset/{00000..00100}.tar

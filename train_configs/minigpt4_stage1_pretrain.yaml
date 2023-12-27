@@ -5,7 +5,7 @@ model:
 
 datasets:
   laion:
-    batch_size: 64
+    batch_size: 1
     vis_processor:
       train:
         name: "blip2_image_train"
@@ -15,7 +15,7 @@ datasets:
         name: "blip_caption"
     sample_ratio: 115
   cc_sbu:
-    batch_size: 64
+    batch_size: 1
     vis_processor:
         train:
           name: "blip2_image_train"
@@ -35,13 +35,13 @@ run:
   warmup_lr: 1e-6
 
   weight_decay: 0.05
-  max_epoch: 4
+  max_epoch: 1
   num_workers: 4
   warmup_steps: 5000
   iters_per_epoch: 5000
 
   seed: 42
-  output_dir: "output/minigpt4_stage1_pretrain"
+  output_dir: "/home/mila/s/subhrajyoti.dasgupta/scratch/minigpt/ckpt/pretrain/output/minigpt4_stage1_pretrain"
 
   amp: True
   resume_ckpt_path: null
@@ -54,5 +54,5 @@ run:
   dist_url: "env://"
   distributed: True
 
-  wandb_log: True
+  wandb_log: False
   job_name: minigpt4_pretrain
